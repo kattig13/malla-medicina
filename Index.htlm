@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Medicina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="titulo">Malla Curricular Medicina</h1>
+  <div class="malla">
+    <!-- Aquí agregaremos los semestres -->
+    <!-- Esto es solo un ejemplo visual con 3 ramos por semestre -->
+    <div class="semestre">
+      <h2>Semestre 1</h2>
+      <div class="ramo">
+        <strong>Introducción a la Medicina</strong><br>
+        5 créditos
+      </div>
+      <div class="ramo">
+        <strong>Recursos Básicos de Atención en Salud</strong><br>
+        4 créditos
+      </div>
+      <div class="ramo">
+        <strong>Inglés Técnico I</strong><br>
+        3 créditos
+      </div>
+    </div>
+
+    <div class="semestre">
+      <h2>Semestre 2</h2>
+      <div class="ramo">
+        <strong>Bases Científicas de la Medicina I</strong><br>
+        6 créditos
+      </div>
+      <div class="ramo">
+        <strong>Biomatemáticas</strong><br>
+        4 créditos
+      </div>
+      <div class="ramo">
+        <strong>Antropología</strong><br>
+        3 créditos
+      </div>
+    </div>
+
+    <!-- Y así hasta el semestre 14 -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
