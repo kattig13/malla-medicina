@@ -1,50 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Medicina</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Curricular Medicina</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .malla {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding-bottom: 20px;
+    }
+    .ramo {
+      background: white;
+      border: 2px solid #007BFF;
+      border-radius: 6px;
+      width: 180px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.3s ease;
+    }
+    .ramo:hover {
+      background: #e6f0ff;
+    }
+    .ramo h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #004080;
+    }
+    .creditos {
+      font-weight: bold;
+      color: #333;
+    }
+    .prerequisitos {
+      margin-top: 10px;
+      display: none;
+      font-size: 14px;
+      color: #555;
+      background: #eef6ff;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .ramo.active .prerequisitos {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <h1 class="titulo">Malla Curricular Medicina</h1>
+
+  <h1>Malla Curricular Medicina</h1>
   <div class="malla">
-    <!-- Aquí agregaremos los semestres -->
-    <!-- Esto es solo un ejemplo visual con 3 ramos por semestre -->
-    <div class="semestre">
-      <h2>Semestre 1</h2>
-      <div class="ramo">
-        <strong>Introducción a la Medicina</strong><br>
-        5 créditos
-      </div>
-      <div class="ramo">
-        <strong>Recursos Básicos de Atención en Salud</strong><br>
-        4 créditos
-      </div>
-      <div class="ramo">
-        <strong>Inglés Técnico I</strong><br>
-        3 créditos
+    <div class="ramo" onclick="togglePrerequisitos(this)">
+      <h3>Anatomía I</h3>
+      <div class="creditos">6 créditos</div>
+      <div class="prerequisitos">
+        Prerrequisitos: Ninguno
       </div>
     </div>
-
-    <div class="semestre">
-      <h2>Semestre 2</h2>
-      <div class="ramo">
-        <strong>Bases Científicas de la Medicina I</strong><br>
-        6 créditos
-      </div>
-      <div class="ramo">
-        <strong>Biomatemáticas</strong><br>
-        4 créditos
-      </div>
-      <div class="ramo">
-        <strong>Antropología</strong><br>
-        3 créditos
+    <div class="ramo" onclick="togglePrerequisitos(this)">
+      <h3>Fisiología I</h3>
+      <div class="creditos">5 créditos</div>
+      <div class="prerequisitos">
+        Prerrequisitos: Anatomía I
       </div>
     </div>
-
-    <!-- Y así hasta el semestre 14 -->
+    <div class="ramo" onclick="togglePrerequisitos(this)">
+      <h3>Bioquímica</h3>
+      <div class="creditos">5 créditos</div>
+      <div class="prerequisitos">
+        Prerrequisitos: Ninguno
+      </div>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function togglePrerequisitos(element) {
+      element.classList.toggle('active');
+    }
+  </script>
+  
 </body>
 </html>
